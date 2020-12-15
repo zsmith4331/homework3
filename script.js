@@ -112,11 +112,11 @@ var numbers = [
 ];
 
 // Function to prompt user to generate password
-function writePassword() {
+function getPasswordOptions() {
   //Variable to store number of characters from user input
-  var passwordLength = generatePassword(
+  var passwordLength = parseInt(
     prompt("How many characters would you like in you password?")
-    );
+    )
 
     if (isNaN(passwordLength) === true) {
       alert("Number of characters must be between 8-128 in length")
@@ -181,7 +181,7 @@ function writePassword() {
 
   //Function for getting a random element for an array
   function getRandom(array) {
-    var randIndex = Math.floor(Math.random() * array.passwordLength);
+    var randIndex = Math.floor(Math.random() * array.length);
     var randElement = array[randIndex];
 
     return randElement;
@@ -189,7 +189,9 @@ function writePassword() {
 
   //Function to generate password with user input
   function makePassword() {
-    var createPassword = generatePassword();
+
+    var createPassword = getPasswordOptions();
+
     //Variable to store password as it's being built
     var finalpassword = [];
 
@@ -202,29 +204,29 @@ function writePassword() {
     //Conditional statement that adds array of lowercase characters into arry of possible characters based on user input
     //Push new random lowercase characters to guaranteeedPassword
     if (createPassword.includeLowerCaseCharacters) {
-      possbilePassword = possbilePassword.concat(includeLowerCaseCharacters);
-      guaranteedPassword.push(getRandom(includeLowerCaseCharacters));
+      possbilePassword = possbilePassword.concat(lowerCase);
+      guaranteedPassword.push(getRandom(lowerCase));
     }
 
     //Conditional statement that adds array of UPPERCASE CHARACTERS into array of possible characters based on user input
     //Push new random UPPERCASE CHARACTERS to guaranteeedPassword
     if (createPassword.includeUpperCaseCharacters) {
-      possbilePassword = possbilePassword.concat(includeUpperCaseCharacters);
-      guaranteedPassword.push(getRandom(includeUpperCaseCharacters));
+      possbilePassword = possbilePassword.concat(upperCase);
+      guaranteedPassword.push(getRandom(upperCase));
     }
 
     //Conditional statement that adds array of special characters into array of possible characters based on user input
     //Push new random special characters to guaranteeedPassword
     if (createPassword.includeSpecialCharacters) {
-      possbilePassword = possbilePassword.concat(includeSpecialCharacters);
-      guaranteedPassword.push(getRandom(includeSpecialCharacters));
+      possbilePassword = possbilePassword.concat(specialchar);
+      guaranteedPassword.push(getRandom(specialchar));
     }
 
     //Conditional statement that adds array of numeric characters into array of possible characters based on user input
     //Push new random numeric characters to guaranteeedPassword
     if (createPassword.includeNumericCharacters) {
-      possbilePassword = possbilePassword.concat(includeNumericCharacters);
-      guaranteedPassword.push(getRandom(includeNumericCharacters));
+      possbilePassword = possbilePassword.concat(numbers);
+      guaranteedPassword.push(getRandom(numbers));
     }
 
     //For loop for possible password
@@ -248,12 +250,12 @@ function writePassword() {
 
     //Write password to the #password input
     function writePassword() {
-      var password = generatePassword();
-      var passwordtext = document.querySelector("#password");
+      var password = makePassword();
+      var passwordText = document.querySelector("#password");
 
       passwordText.value = "Your password is " + password;
 
     }
 
     //Add Event listener to generate password button
-    generateBtn.addEventListener("click", writePassword);
+  generateBtn.addEventListener("click", writePassword);
