@@ -1,6 +1,3 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
 //Array of lowercase letters for the password
 var lowerCase = [
   "a",
@@ -176,6 +173,8 @@ function getPasswordOptions() {
       includeNumericCharacters: includeNumericCharacters,
     };
 
+    console.log(desiredpassword);
+
     return desiredpassword;
   }
 
@@ -183,6 +182,8 @@ function getPasswordOptions() {
   function getRandom(array) {
     var randIndex = Math.floor(Math.random() * array.length);
     var randElement = array[randIndex];
+
+    console.log(getRandom);
 
     return randElement;
   }
@@ -192,8 +193,10 @@ function getPasswordOptions() {
 
     var createPassword = getPasswordOptions();
 
+    console.log(createPassword);
+
     //Variable to store password as it's being built
-    var finalpassword = [];
+    var finalPassword = [];
 
     //Array to store type of characters included in the password
     var possbilePassword = [];
@@ -231,22 +234,22 @@ function getPasswordOptions() {
 
     //For loop for possible password
     for (var i = 0; i < createPassword.passwordLength; i++) {
-      var possbilePassword = getRandom(possbilePassword);
+      var possbilePasswords = getRandom(possbilePassword);
 
-      finalpassword.push(possbilePassword);
+      console.log(createPassword[i]);
+
+      finalPassword.push(possbilePasswords);
     }
 
     //Add at least of of the guarnteed passwords
     for (var i = 0; i < guaranteedPassword.passwordLength; i++) {
-      finalpassword[i] = guaranteedPassword[i];
+      finalPassword[i] = guaranteedPassword[i];
     }
 
-    return finalpassword.join(",");
+    console.log(guaranteedPassword[i]);
 
+    return finalPassword.join('');
     }
-
-    //Get references to the #password element
-    var makePasswordBtn = document.querySelector("#password");
 
     //Write password to the #password input
     function writePassword() {
@@ -254,8 +257,11 @@ function getPasswordOptions() {
       var passwordText = document.querySelector("#password");
 
       passwordText.value = "Your password is " + password;
-
     }
 
+    // Assignment Code
+    var generateBtn = document.querySelector("#generate");
+
     //Add Event listener to generate password button
-  generateBtn.addEventListener("click", writePassword);
+    generateBtn.addEventListener("click", writePassword);
+
