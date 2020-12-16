@@ -2,11 +2,11 @@
 
 ## Description
 
-This is the third weeks homework assignment. The requirements for this homework were to create an application that an employee can use to generate a random password. We were given a starter code including an HTML and CSS, along with a basic Javascript that inclueded an click event listener. I was able to learn and understand from serveral of the class activies, and in turn be able to apply those to the Javascript code. 
+This is the third weeks homework assignment. The requirements for this homework were to create an application that an employee can use to generate a random password. We were given a starter code including an HTML and CSS, along with a basic Javascript that included a click event listener. I was able to learn and understand from several of the class actives, and in turn be able to apply those to the Javascript code. 
 
-I did encounter some issues along the way, including not being able to get click event listener to work at all. In order to overcome this I was able to reach out to my study group as well as utizle office hours. With the assistance of a teacher assitant in particular I was able to understand my mistakes inclding not checking code enough as I was writing as well as not utilzing the console.log like I should. I feel these are things I can definatly improve upon.
+I did encounter some issues along the way, including not being able to get click event listener to work at all. In order to overcome this I was able to reach out to my study group as well as utile office hours. With the assistance of a teacher assistant in particular I was able to understand my mistakes including not checking code enough as I was writing as well as not utilizing the console.log like I should. I feel these are things I can defiantly improve upon.
 
-I also had the assitance of a tutor who really helped me get this assignment complete. I had one remaing issue prior to our tutoring session and they really helped me narrow down where my issue was coming from. However, we were not able to pinpoint the issue in our tutoring session. After the tutoring session I was able to discover where my mistake was and got it corrected. 
+I also had the assistance of a tutor who really helped me get this assignment complete. I had one remaining issue prior to our tutoring session and they really helped me narrow down where my issue was coming from. However, we were not able to pinpoint the issue in our tutoring session. After the tutoring session I was able to discover where my mistake was and got it corrected. 
 
 This project was a real challenge to me. I do feel I have completed all the requirements and have learned so much. Some of the things I feel I have a better understanding of are functions, arrays, variables
 
@@ -31,7 +31,7 @@ First Prompt asking if you would like to include lowercase characters
 
 ![Screen Shot 2020-12-15 at 10 53 27 PM](https://user-images.githubusercontent.com/71040754/102303308-e6e5e580-3f28-11eb-83a9-fa8b790fe41d.png)
 
-Second Prompt asking if you would like to include upppercase characters
+Second Prompt asking if you would like to include uppercase characters
 
 ![Screen Shot 2020-12-15 at 10 53 48 PM](https://user-images.githubusercontent.com/71040754/102303315-ea796c80-3f28-11eb-9dad-cd59b05548b0.png)
 
